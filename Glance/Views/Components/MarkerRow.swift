@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// Compact single-row display of a tracked marker on the home screen.
-/// Shows: status dot, marker name, latest value with unit, trend arrow.
+/// Shows: status icon (color + shape paired), marker name, latest value with unit, trend arrow.
 struct MarkerRow: View {
 
     let userMarker: UserMarker
@@ -12,8 +12,8 @@ struct MarkerRow: View {
 
     var body: some View {
         HStack(spacing: 12) {
-            // Status accent dot (left edge)
-            StatusBadge(status: status, size: .dot)
+            // Status indicator: icon + color paired (never color-only — CLAUDE.md non-negotiable)
+            statusIndicator
 
             // Marker name
             Text(userMarker.markerDefinition?.displayName ?? "Unknown")
@@ -67,6 +67,30 @@ struct MarkerRow: View {
         default:    concerning = false
         }
         return concerning ? Color("StatusRed") : Color("StatusGreen")
+    }
+
+    // MARK: - Status Indicator
+
+    /// SF Symbol icon in the status color — shape communicates status without relying on color alone.
+    @ViewBuilder
+    private var statusIndicator: some View {
+        switch status {
+        case .normal:
+            Image(systemName: "checkmark.circle.fill")
+                .font(.caption.weight(.semibold))
+                .foregroundStyle(Color("StatusGreen"))
+        case .watch:
+            Image(systemName: "exclamationmark.triangle.fill")
+                .font(.caption.weight(.semibold))
+                .foregroundStyle(Color("StatusAmber"))
+        case .outOfRange:
+            Image(systemName: "exclamationmark.circle.fill")
+                .font(.caption.weight(.semibold))
+                .foregroundStyle(Color("StatusRed"))
+        case .noData:
+            Color.clear
+                .frame(width: 14, height: 14)
+        }
     }
 
     // MARK: - Formatting

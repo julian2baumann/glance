@@ -120,7 +120,7 @@ struct MainTabView: View {
                     Label("Markers", systemImage: "heart.text.square.fill")
                 }
 
-            VisitsPlaceholderView()
+            VisitsView(repository: repository)
                 .tabItem {
                     Label("Visits", systemImage: "calendar")
                 }
@@ -131,21 +131,6 @@ struct MainTabView: View {
                 }
         }
         .tint(Color.accentColor)
-    }
-}
-
-// MARK: - Placeholder Views (replaced in M4)
-
-struct VisitsPlaceholderView: View {
-    var body: some View {
-        NavigationStack {
-            ContentUnavailableView(
-                "Visits Coming Soon",
-                systemImage: "calendar.badge.clock",
-                description: Text("Visit logging and doctor prep insights will be available in a future update.")
-            )
-            .navigationTitle("Visits")
-        }
     }
 }
 

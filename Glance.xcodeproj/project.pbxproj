@@ -11,6 +11,7 @@
 		03875D03402C20C0BDA2210E /* LocalDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6915A3430161D41781608E7D /* LocalDataRepository.swift */; };
 		0B00CC7F4E8A729F0CF61075 /* MarkerCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6734B73ADC2A224F9FF4A0 /* MarkerCategory.swift */; };
 		0C160BDC338397BD84D0FEFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6FFB086E1A3A66806F6BF6B /* Assets.xcassets */; };
+		0E9331A945AB0FDBCA2E02D2 /* VisitsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCFBF05F511DCE8139C31EC /* VisitsViewModel.swift */; };
 		2086532B5671522EF04560FA /* MarkerLibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D27397B897CDD6F5183A67 /* MarkerLibraryTests.swift */; };
 		280B0F1E4FBC8EA389E96C01 /* ReferenceRangeEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FEBA12C8A464CA387BE9DA /* ReferenceRangeEditorView.swift */; };
 		55E6AE9D608E56482F7F6164 /* StatusBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B21A4320DD3B60CAD4517 /* StatusBadge.swift */; };
@@ -25,6 +26,7 @@
 		99AA2458B791D31ECAC45C2C /* MarkerData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CBB0189BD5616E057AD2471 /* MarkerData.json */; };
 		9B69E85607D48B1B3B18E93A /* BatchEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2093BBCD33DE52D3B067B234 /* BatchEntryView.swift */; };
 		A4E65E0662359F4172B7336D /* PrivacyPolicy.md in Resources */ = {isa = PBXBuildFile; fileRef = 3B65576B766F9FA6A35EAC5A /* PrivacyPolicy.md */; };
+		AB6F3801E5B4874312917D17 /* InsightCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC6915B55D17E371236BF90 /* InsightCard.swift */; };
 		AC4E7A56802CF451C742714D /* MarkerSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9E72C5D273DA3D762E40AB /* MarkerSelectionView.swift */; };
 		BB63C250D1A79E46B7090E00 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA8C5198FCFAB71D139E324 /* OnboardingView.swift */; };
 		BC86B120B76078645D8FF566 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447D13D92A7CE8DDDFFA8DA1 /* HomeView.swift */; };
@@ -33,6 +35,7 @@
 		BEECC0BA0773B3724B74219D /* Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8649286783AD2C8EBE64B448 /* Visit.swift */; };
 		C5C6C8817798EF7250A1F5C1 /* EntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E6FC911EFBAFA02F6B91CA /* EntryViewModel.swift */; };
 		CBE42E96B9846375754FA179 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC323D0444DFA30C7061006 /* HomeViewModel.swift */; };
+		CE0B38DA360C49609B6D4817 /* VisitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FB4D0C5DA6B457D28B1BE7 /* VisitsView.swift */; };
 		D1999538FCCA77421176FF8D /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF794EE875C4A07C2760022A /* SettingsViewModel.swift */; };
 		D48C03C1CB450D7500685618 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8607593DF77C1FF5657F0B23 /* Profile.swift */; };
 		D91640CFB984C2F80E4414F6 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A349F5C936EDC65AE3178CC2 /* TestHelpers.swift */; };
@@ -47,6 +50,7 @@
 		F4081B87C37821A6C3816ABD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D307975E438EA23815792F /* SettingsView.swift */; };
 		F5EB87A43DF18060CCE05D4B /* QuickAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3759E2CA8CD5BAAA3983F9 /* QuickAddView.swift */; };
 		FEA9D0C8D5BB9FC9D453AD4B /* MarkerDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7DFB52674B5F63ABA7FC91 /* MarkerDetailViewModel.swift */; };
+		FEB51ED2729DF71A84C6BB00 /* VisitCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC3CDC2EF2363ADE9B604D /* VisitCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,12 +92,15 @@
 		8C660F65081942251BC61D95 /* MarkerLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerLibrary.swift; sourceTree = "<group>"; };
 		9D3759E2CA8CD5BAAA3983F9 /* QuickAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickAddView.swift; sourceTree = "<group>"; };
 		A349F5C936EDC65AE3178CC2 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
+		A5FB4D0C5DA6B457D28B1BE7 /* VisitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitsView.swift; sourceTree = "<group>"; };
 		A76B21A4320DD3B60CAD4517 /* StatusBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBadge.swift; sourceTree = "<group>"; };
 		AAEA06780CC054259B88089D /* InsightsEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsEngine.swift; sourceTree = "<group>"; };
 		AE6734B73ADC2A224F9FF4A0 /* MarkerCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerCategory.swift; sourceTree = "<group>"; };
 		B27080B69C5FB2CB7016CB5D /* MarkerDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerDefinition.swift; sourceTree = "<group>"; };
 		C7770E96BCFDEDFDC3FF5F88 /* TrendChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendChart.swift; sourceTree = "<group>"; };
+		CCCFBF05F511DCE8139C31EC /* VisitsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitsViewModel.swift; sourceTree = "<group>"; };
 		CE7DFB52674B5F63ABA7FC91 /* MarkerDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerDetailViewModel.swift; sourceTree = "<group>"; };
+		CFC6915B55D17E371236BF90 /* InsightCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightCard.swift; sourceTree = "<group>"; };
 		D5E6FC911EFBAFA02F6B91CA /* EntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewModel.swift; sourceTree = "<group>"; };
 		D5FEBA12C8A464CA387BE9DA /* ReferenceRangeEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceRangeEditorView.swift; sourceTree = "<group>"; };
 		D7D27397B897CDD6F5183A67 /* MarkerLibraryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerLibraryTests.swift; sourceTree = "<group>"; };
@@ -103,6 +110,7 @@
 		F55EAFB4A1436B2E326781AA /* BatchEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchEntryViewModel.swift; sourceTree = "<group>"; };
 		F6FFB086E1A3A66806F6BF6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB2BE865919B52202377385E /* VisitPrepInsight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitPrepInsight.swift; sourceTree = "<group>"; };
+		FCCC3CDC2EF2363ADE9B604D /* VisitCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -115,6 +123,7 @@
 				CE7DFB52674B5F63ABA7FC91 /* MarkerDetailViewModel.swift */,
 				305E69A1EA1470BD7D028E39 /* OnboardingViewModel.swift */,
 				EF794EE875C4A07C2760022A /* SettingsViewModel.swift */,
+				CCCFBF05F511DCE8139C31EC /* VisitsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -129,6 +138,7 @@
 				4A0574F0E70D5FAD39CBE09E /* MarkerDetail */,
 				3E98FB79E314F065D884A42F /* Onboarding */,
 				E0413FAB955DB23947542D9A /* Settings */,
+				C38E32374200CA99B85DAD40 /* Visits */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -235,6 +245,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		C38E32374200CA99B85DAD40 /* Visits */ = {
+			isa = PBXGroup;
+			children = (
+				A5FB4D0C5DA6B457D28B1BE7 /* VisitsView.swift */,
+			);
+			path = Visits;
+			sourceTree = "<group>";
+		};
 		E0413FAB955DB23947542D9A /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,10 +292,12 @@
 		F8CD064AA5DD3739B5BB26C8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				CFC6915B55D17E371236BF90 /* InsightCard.swift */,
 				5EC2DFCCD7ED185B77B21708 /* MarkerRow.swift */,
 				D5FEBA12C8A464CA387BE9DA /* ReferenceRangeEditorView.swift */,
 				A76B21A4320DD3B60CAD4517 /* StatusBadge.swift */,
 				C7770E96BCFDEDFDC3FF5F88 /* TrendChart.swift */,
+				FCCC3CDC2EF2363ADE9B604D /* VisitCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -407,6 +427,7 @@
 				6F5E45B924CA75A0E278EB6A /* GlanceApp.swift in Sources */,
 				BC86B120B76078645D8FF566 /* HomeView.swift in Sources */,
 				CBE42E96B9846375754FA179 /* HomeViewModel.swift in Sources */,
+				AB6F3801E5B4874312917D17 /* InsightCard.swift in Sources */,
 				DC826B03798D9A718E18E411 /* InsightsEngine.swift in Sources */,
 				03875D03402C20C0BDA2210E /* LocalDataRepository.swift in Sources */,
 				0B00CC7F4E8A729F0CF61075 /* MarkerCategory.swift in Sources */,
@@ -430,7 +451,10 @@
 				BECDAE31869B70CB2FF3D39C /* TrendChart.swift in Sources */,
 				93E4781D5A23DFE7B7FACB47 /* UserMarker.swift in Sources */,
 				BEECC0BA0773B3724B74219D /* Visit.swift in Sources */,
+				FEB51ED2729DF71A84C6BB00 /* VisitCard.swift in Sources */,
 				DDF03E9048B39950A9FD5FB3 /* VisitPrepInsight.swift in Sources */,
+				CE0B38DA360C49609B6D4817 /* VisitsView.swift in Sources */,
+				0E9331A945AB0FDBCA2E02D2 /* VisitsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -259,6 +259,7 @@ Generate these once per view file. Scan visually in Xcode for layout breakage, c
 - Feature branches off `dev` only if needed for isolated work (e.g., `feature/batch-entry`).
 - Commit after each completed milestone, not after each task.
 - Commit message format is specified at the bottom of each milestone in the roadmap.
+- **Remote:** `https://github.com/julian2baumann/glance.git` — push `dev` to origin after every milestone commit: `git push origin dev`
 
 ### When Something Isn't Specified
 

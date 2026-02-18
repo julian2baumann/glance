@@ -10,6 +10,7 @@ final class MarkerDetailViewModel {
     var entries: [MarkerEntry] = []
     var isShowingAddEntry: Bool = false
     var entryToEdit: MarkerEntry? = nil
+    var isShowingRangeEditor: Bool = false
     var status: MarkerStatus = .noData
     var trend: TrendDirection = .insufficient
     var isTrendConcerning: Bool = false

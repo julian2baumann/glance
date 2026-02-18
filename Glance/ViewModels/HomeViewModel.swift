@@ -11,6 +11,7 @@ final class HomeViewModel {
     var searchQuery: String = ""
     var searchResults: SearchResults = SearchResults(trackedMarkers: [], untrackedDefinitions: [])
     var isShowingQuickAdd: Bool = false
+    var isShowingBatchEntry: Bool = false
 
     var isSearching: Bool {
         !searchQuery.trimmingCharacters(in: .whitespaces).isEmpty

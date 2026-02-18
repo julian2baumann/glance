@@ -45,6 +45,11 @@ struct MarkerDetailView: View {
                 viewModel.load()
             }
         }
+        .sheet(isPresented: $viewModel.isShowingRangeEditor) {
+            ReferenceRangeEditorView(marker: userMarker, repository: repository) {
+                viewModel.load()
+            }
+        }
     }
 
     // MARK: - Chart Section
@@ -178,6 +183,13 @@ struct MarkerDetailView: View {
                 viewModel.isShowingAddEntry = true
             } label: {
                 Label("Add Reading", systemImage: "plus")
+            }
+        }
+        ToolbarItem(placement: .secondaryAction) {
+            Button {
+                viewModel.isShowingRangeEditor = true
+            } label: {
+                Label("Edit Range", systemImage: "slider.horizontal.3")
             }
         }
     }

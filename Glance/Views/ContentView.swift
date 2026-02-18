@@ -1,13 +1,18 @@
 import SwiftUI
 import SwiftData
+import LocalAuthentication
 
 /// Root view. Detects first launch and routes to either Onboarding or the main tab shell.
+/// Also enforces biometric lock when enabled — locks on background, prompts on foreground.
 struct ContentView: View {
 
     @Environment(\.modelContext) private var context
+    @Environment(\.scenePhase) private var scenePhase
+
     @State private var repository: LocalDataRepository?
     @State private var showOnboarding: Bool = false
     @State private var isReady: Bool = false
+    @State private var isLocked: Bool = false
 
     var body: some View {
         Group {
@@ -29,8 +34,77 @@ struct ContentView: View {
             let repo = LocalDataRepository(context: context)
             repository = repo
             showOnboarding = repo.getTrackedMarkers().isEmpty
+            if repo.getBiometricLockEnabled() {
+                isLocked = true
+            }
             isReady = true
         }
+        .onChange(of: scenePhase) { _, phase in
+            guard let repo = repository else { return }
+            if phase == .background {
+                if repo.getBiometricLockEnabled() {
+                    isLocked = true
+                }
+            } else if phase == .active && isLocked {
+                authenticate(repository: repo)
+            }
+        }
+        .fullScreenCover(isPresented: $isLocked) {
+            BiometricLockScreen {
+                if let repo = repository {
+                    authenticate(repository: repo)
+                }
+            }
+        }
+    }
+
+    private func authenticate(repository: LocalDataRepository) {
+        let context = LAContext()
+        var error: NSError?
+        guard context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) else {
+            // Biometrics unavailable (device passcode fallback or no biometrics configured)
+            isLocked = false
+            return
+        }
+        context.evaluatePolicy(
+            .deviceOwnerAuthentication,
+            localizedReason: "Unlock Glance to access your health data"
+        ) { success, _ in
+            Task { @MainActor in
+                if success { isLocked = false }
+            }
+        }
+    }
+}
+
+// MARK: - Biometric Lock Screen
+
+private struct BiometricLockScreen: View {
+    let onUnlock: () -> Void
+
+    var body: some View {
+        ZStack {
+            Color("AppBackground").ignoresSafeArea()
+            VStack(spacing: 32) {
+                Image(systemName: "stethoscope")
+                    .font(.system(size: 64))
+                    .foregroundStyle(Color.accentColor)
+
+                Text("Glance")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+
+                Button {
+                    onUnlock()
+                } label: {
+                    Label("Unlock", systemImage: "faceid")
+                        .font(.headline)
+                        .frame(minWidth: 160, minHeight: 44)
+                }
+                .buttonStyle(.borderedProminent)
+            }
+        }
+        .onAppear { onUnlock() }
     }
 }
 
@@ -51,7 +125,7 @@ struct MainTabView: View {
                     Label("Visits", systemImage: "calendar")
                 }
 
-            SettingsPlaceholderView()
+            SettingsView(repository: repository)
                 .tabItem {
                     Label("Settings", systemImage: "gear")
                 }
@@ -60,7 +134,7 @@ struct MainTabView: View {
     }
 }
 
-// MARK: - Placeholder Views (replaced in M3/M4)
+// MARK: - Placeholder Views (replaced in M4)
 
 struct VisitsPlaceholderView: View {
     var body: some View {
@@ -71,19 +145,6 @@ struct VisitsPlaceholderView: View {
                 description: Text("Visit logging and doctor prep insights will be available in a future update.")
             )
             .navigationTitle("Visits")
-        }
-    }
-}
-
-struct SettingsPlaceholderView: View {
-    var body: some View {
-        NavigationStack {
-            ContentUnavailableView(
-                "Settings Coming Soon",
-                systemImage: "gear",
-                description: Text("Marker management, export, and reference range editing will be available in a future update.")
-            )
-            .navigationTitle("Settings")
         }
     }
 }

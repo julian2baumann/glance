@@ -6,6 +6,7 @@ final class Profile {
     var id: UUID
     var name: String
     var createdAt: Date
+    var biometricLockEnabled: Bool = false
 
     @Relationship(deleteRule: .cascade)
     var userMarkers: [UserMarker] = []

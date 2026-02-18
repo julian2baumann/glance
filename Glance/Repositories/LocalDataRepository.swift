@@ -127,6 +127,23 @@ final class LocalDataRepository: DataRepository {
         try? context.save()
     }
 
+    func updateMarker(_ marker: UserMarker) {
+        try? context.save()
+    }
+
+    // MARK: - Biometric Lock (not in protocol — settings-only)
+
+    func getBiometricLockEnabled() -> Bool {
+        let descriptor = FetchDescriptor<Profile>()
+        return (try? context.fetch(descriptor))?.first?.biometricLockEnabled ?? false
+    }
+
+    func setBiometricLock(_ enabled: Bool) {
+        let profile = getOrCreateDefaultProfile()
+        profile.biometricLockEnabled = enabled
+        try? context.save()
+    }
+
     // MARK: - Entries
 
     func getEntries(for marker: UserMarker, in dateRange: ClosedRange<Date>?) -> [MarkerEntry] {

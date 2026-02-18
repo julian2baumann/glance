@@ -1,25 +1,14 @@
-# Glance Privacy Policy
+# Privacy Policy
 
-**Effective Date:** February 18, 2026
+**Glance** is designed with your privacy as the top priority.
 
-## The Short Version
+- We collect no personal data.
+- We transmit no data to any server.
+- Everything stays on your device.
+- Your health information is stored locally in an encrypted iOS app container.
+- You can export your data at any time using the Export feature in Settings.
+- You can delete all data by deleting the app.
 
-We collect no data. We transmit no data. Everything stays on your device.
+No third-party analytics, advertising, or tracking SDKs are used.
 
-## The Full Version
-
-Glance is a local-only iOS application. All health data you enter is stored exclusively on your device using Apple's SwiftData framework, which benefits from iOS filesystem encryption when your device is locked.
-
-**What we collect:** Nothing. Glance has no analytics, no crash reporting that phones home, no advertising frameworks, and no user accounts.
-
-**What we transmit:** Nothing. Glance makes no network requests of any kind.
-
-**Data export:** When you explicitly use the Export feature, Glance creates a file containing your health data and presents it via the iOS share sheet. You control where that file goes. The file is not encrypted — treat it as sensitive health information.
-
-**Third-party SDKs:** None. Zero.
-
-**Changes to this policy:** If this policy changes in a future version, we will note it here with a new effective date.
-
-## Contact
-
-Glance is developed by Julian Baumann. Questions about privacy can be directed to the App Store listing.
+*Last updated: February 2026*

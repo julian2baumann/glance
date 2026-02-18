@@ -12,6 +12,7 @@ protocol DataRepository {
     func addTrackedMarker(_ definition: MarkerDefinition) -> UserMarker
     func removeTrackedMarker(_ marker: UserMarker)
     func updateMarkerOrder(_ markers: [UserMarker])
+    func updateMarker(_ marker: UserMarker)
 
     // MARK: - Entries
     func getEntries(for marker: UserMarker, in dateRange: ClosedRange<Date>?) -> [MarkerEntry]

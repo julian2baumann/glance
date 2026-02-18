@@ -30,6 +30,13 @@ struct HomeView: View {
                     viewModel.refresh()
                 }
             }
+            .sheet(isPresented: $viewModel.isShowingBatchEntry, onDismiss: {
+                viewModel.refresh()
+            }) {
+                BatchEntryView(repository: repository) {
+                    viewModel.refresh()
+                }
+            }
         }
     }
 
@@ -120,11 +127,21 @@ struct HomeView: View {
         )
     }
 
-    // MARK: - Quick Add FAB
+    // MARK: - Quick Add / Batch Entry FAB (Menu)
 
     private var quickAddButton: some View {
-        Button {
-            viewModel.isShowingQuickAdd = true
+        Menu {
+            Button {
+                viewModel.isShowingQuickAdd = true
+            } label: {
+                Label("Quick Add", systemImage: "plus.circle")
+            }
+
+            Button {
+                viewModel.isShowingBatchEntry = true
+            } label: {
+                Label("Add Lab Panel", systemImage: "list.bullet.clipboard")
+            }
         } label: {
             Image(systemName: "plus")
                 .font(.title2.weight(.semibold))

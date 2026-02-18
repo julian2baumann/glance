@@ -41,6 +41,7 @@
 		D91640CFB984C2F80E4414F6 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A349F5C936EDC65AE3178CC2 /* TestHelpers.swift */; };
 		DC826B03798D9A718E18E411 /* InsightsEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEA06780CC054259B88089D /* InsightsEngine.swift */; };
 		DDF03E9048B39950A9FD5FB3 /* VisitPrepInsight.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2BE865919B52202377385E /* VisitPrepInsight.swift */; };
+		DE34A9901B82C71E208A0DB2 /* GlanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F49D9A06715ED137CB936 /* GlanceUITests.swift */; };
 		E34386BDB8FB47E6330C2AF9 /* MarkerDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27080B69C5FB2CB7016CB5D /* MarkerDefinition.swift */; };
 		E4FC6229D28998936C3E3626 /* InsightsEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ED4B84CAFDB063B6A3104C /* InsightsEngineTests.swift */; };
 		E6C12D438C231CA0CBF42F19 /* SearchServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851145288350C626A28358F4 /* SearchServiceTests.swift */; };
@@ -54,6 +55,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		073AEBC413AECBE9628AE49F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 070164DEC24115A8F4F2D9F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5796247D68EDA6C8F0512954;
+			remoteInfo = Glance;
+		};
 		4A896AE07C4E38DED14E59D7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 070164DEC24115A8F4F2D9F7 /* Project object */;
@@ -79,6 +87,7 @@
 		447D13D92A7CE8DDDFFA8DA1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4C9E72C5D273DA3D762E40AB /* MarkerSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerSelectionView.swift; sourceTree = "<group>"; };
 		4CBB0189BD5616E057AD2471 /* MarkerData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MarkerData.json; sourceTree = "<group>"; };
+		4D1F7199055C486F8518FE80 /* GlanceUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = GlanceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC2DFCCD7ED185B77B21708 /* MarkerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerRow.swift; sourceTree = "<group>"; };
 		6915A3430161D41781608E7D /* LocalDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataRepository.swift; sourceTree = "<group>"; };
 		6F425E1E94758D72F88B1BDA /* DataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepository.swift; sourceTree = "<group>"; };
@@ -90,6 +99,7 @@
 		8649286783AD2C8EBE64B448 /* Visit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visit.swift; sourceTree = "<group>"; };
 		87D307975E438EA23815792F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		8C660F65081942251BC61D95 /* MarkerLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerLibrary.swift; sourceTree = "<group>"; };
+		929F49D9A06715ED137CB936 /* GlanceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceUITests.swift; sourceTree = "<group>"; };
 		9D3759E2CA8CD5BAAA3983F9 /* QuickAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickAddView.swift; sourceTree = "<group>"; };
 		A349F5C936EDC65AE3178CC2 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		A5FB4D0C5DA6B457D28B1BE7 /* VisitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitsView.swift; sourceTree = "<group>"; };
@@ -148,6 +158,7 @@
 			children = (
 				F770F9C5C342F99F4D4564C0 /* Glance */,
 				E73B130146CBB20A5A24D80E /* GlanceTests */,
+				ECFD73B9F84FA655ADFFBC03 /* GlanceUITests */,
 				897E7B5C0E3778F8AD681930 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -217,6 +228,7 @@
 			children = (
 				E6681C13BACBBD0D74A80EB4 /* Glance.app */,
 				1B1BE2303D621C4C78C622FA /* GlanceTests.xctest */,
+				4D1F7199055C486F8518FE80 /* GlanceUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -271,6 +283,14 @@
 				A349F5C936EDC65AE3178CC2 /* TestHelpers.swift */,
 			);
 			path = GlanceTests;
+			sourceTree = "<group>";
+		};
+		ECFD73B9F84FA655ADFFBC03 /* GlanceUITests */ = {
+			isa = PBXGroup;
+			children = (
+				929F49D9A06715ED137CB936 /* GlanceUITests.swift */,
+			);
+			path = GlanceUITests;
 			sourceTree = "<group>";
 		};
 		F770F9C5C342F99F4D4564C0 /* Glance */ = {
@@ -350,6 +370,24 @@
 			productReference = 1B1BE2303D621C4C78C622FA /* GlanceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		FC0A9712B2B0A91E7EFC2FF4 /* GlanceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E38810268000848D2EE3D6CE /* Build configuration list for PBXNativeTarget "GlanceUITests" */;
+			buildPhases = (
+				1BF6D06ABDC56F8AF44AC272 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B423A9784C4F14BDBB893C26 /* PBXTargetDependency */,
+			);
+			name = GlanceUITests;
+			packageProductDependencies = (
+			);
+			productName = GlanceUITests;
+			productReference = 4D1F7199055C486F8518FE80 /* GlanceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -366,6 +404,11 @@
 					730743D4A79A9CA460D4AAA3 = {
 						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
+					};
+					FC0A9712B2B0A91E7EFC2FF4 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5796247D68EDA6C8F0512954;
 					};
 				};
 			};
@@ -385,6 +428,7 @@
 			targets = (
 				5796247D68EDA6C8F0512954 /* Glance */,
 				730743D4A79A9CA460D4AAA3 /* GlanceTests */,
+				FC0A9712B2B0A91E7EFC2FF4 /* GlanceUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -412,6 +456,14 @@
 				2086532B5671522EF04560FA /* MarkerLibraryTests.swift in Sources */,
 				E6C12D438C231CA0CBF42F19 /* SearchServiceTests.swift in Sources */,
 				D91640CFB984C2F80E4414F6 /* TestHelpers.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BF6D06ABDC56F8AF44AC272 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE34A9901B82C71E208A0DB2 /* GlanceUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +517,11 @@
 			isa = PBXTargetDependency;
 			target = 5796247D68EDA6C8F0512954 /* Glance */;
 			targetProxy = 4A896AE07C4E38DED14E59D7 /* PBXContainerItemProxy */;
+		};
+		B423A9784C4F14BDBB893C26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5796247D68EDA6C8F0512954 /* Glance */;
+			targetProxy = 073AEBC413AECBE9628AE49F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -521,6 +578,24 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Glance.app/Glance";
+			};
+			name = Release;
+		};
+		A778937A8AD8F70E6EF35964 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.julianbaumann.glance.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Glance;
 			};
 			name = Release;
 		};
@@ -582,6 +657,24 @@
 				SWIFT_VERSION = 5.9;
 			};
 			name = Release;
+		};
+		B302F37FB6801BCDAAD341DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.julianbaumann.glance.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Glance;
+			};
+			name = Debug;
 		};
 		D05ED2ACEFCCF8F1506FF897 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -685,6 +778,15 @@
 			buildConfigurations = (
 				49F89CE9BD8B0507FE45958A /* Debug */,
 				D05ED2ACEFCCF8F1506FF897 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E38810268000848D2EE3D6CE /* Build configuration list for PBXNativeTarget "GlanceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B302F37FB6801BCDAAD341DF /* Debug */,
+				A778937A8AD8F70E6EF35964 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

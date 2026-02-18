@@ -178,6 +178,7 @@ private struct UntrackedDefinitionRow: View {
                 .font(.subheadline.weight(.medium))
                 .buttonStyle(.bordered)
                 .controlSize(.small)
+                .accessibilityLabel("Add \(definition.displayName)")
         }
         .frame(minHeight: 44)
     }

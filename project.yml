@@ -53,3 +53,17 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: com.julianbaumann.glance.tests
         IPHONEOS_DEPLOYMENT_TARGET: "17.0"
         GENERATE_INFOPLIST_FILE: "YES"
+
+  GlanceUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: GlanceUITests
+    dependencies:
+      - target: Glance
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.julianbaumann.glance.uitests
+        IPHONEOS_DEPLOYMENT_TARGET: "17.0"
+        GENERATE_INFOPLIST_FILE: "YES"
